@@ -79,3 +79,6 @@ function getReg(method,str) {
 if(typeof module === 'object') {
   module.exports = new RegEx();
 }
+
+
+var reg = new RegEx();
