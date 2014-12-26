@@ -60,10 +60,10 @@ function getReg(method,str) {
   var expressions = {
     'startsWithRange' : '^[' + str + ']',
     'startsWithChar' : '^' + str[0] + '\\s',
-    'startsWithWord' : '^' + str,
+    'startsWithWord' : '^' + str + '\\s',
     'endsWithRange' : '[' + str + ']$',
     'endsWithChar' : str + '$',
-    'endsWithWord' : str + '$',
+    'endsWithWord' : '\\s{1,}' + str + '$',
     'containsRange' : '[' + str + ']',
     'containsChar' : str[0],
     'containsWord' : str,
