@@ -23,6 +23,7 @@ function RegEx() {
   this.init();
 }
 
+// initialize all the methods of teh regular expression
 RegEx.prototype.init = function() {
   
   var negative = 'doesNot';
@@ -42,6 +43,7 @@ RegEx.prototype.init = function() {
   }
 };
 
+// used to generate function for each of them
 RegEx.prototype.process = function(method) {
   
   var func = function(str) {
@@ -52,6 +54,7 @@ RegEx.prototype.process = function(method) {
   return func;
 };
 
+// return function specific regular expression
 function getReg(method,str) {
   
   str = str || '';
