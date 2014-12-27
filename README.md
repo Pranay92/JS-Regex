@@ -13,14 +13,28 @@ Once the library is loaded, all the methods are added in the prototype of the St
 
 1. `.startsWithChar(char)` returns true if the string starts with the provided character.  
 2. `.startsWithWord(word)` returns true if the string starts with the provided word.  
-3. `startsWithRange(range)` returns true if the string starts with the provided range. 
+3. `.startsWithRange(range)` returns true if the string starts with the provided range. 
 4. `.endsWithChar(char)` returns true if the string ends with the provided chararacter.
 5. `.endsWithWord(word)` returns true if the string ends with the provided word.  
 6. `.endsWithRange(range)` returns true if the string ends with the provided range.  
 7. `.containsChar(char)` returns true if the string contains the provided character.
 8. `.containsWord(word)` returns true if the string contains the provided word.
 
+
+## Method Chaining
+
+You can also do method chaining. Example - 
+````
+  var str = 'This is not amazing, but still I'm gonna try it'
+  
+  // the following will return true
+  var isValid = str.startsWithChar('T')
+                   .containsWord('something')
+                   .containsRange('1-9')
+                   .endsWithWord('it')
+                   .endsWithChar('t')
+````
 ## TODO
 
-1. Allow method chaining to group multiple regexpressions into one.  
-2. Find a way to minimise the file size.
+1. Find a way to minimise the file size.
+2. Add more methods.
