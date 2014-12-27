@@ -37,6 +37,13 @@ RegEx.prototype.init = function() {
       var currVerb = this._suffixes[i];
       var methodName = currMethod + currVerb;
       String.prototype[methodName] = this.process(methodName);
+
+      /*
+        this is IMPORTANT!
+        since we return a boolean value, we need to apply all the methods to a boolean variable too!
+        But we only verify the regular expression test if the value passed in was of type string
+      */
+      Boolean.prototype[methodName] = this.process(methodName);
     
     }
   }
@@ -45,9 +52,24 @@ RegEx.prototype.init = function() {
 // used to generate function for each of them
 RegEx.prototype.process = function(method) {
   
+  var self = this;
+
   var func = function(str) {
+
+    // do not compute further if the previous result was false
+    if(this.__result === false) {
+      return false;
+    }
+
+    // this works the first time when called on a string variable
+    if(typeof this.valueOf() === 'string') {
+      self.__value = this.valueOf();
+    }
+
     var exp = getReg(method,str);
-    return exp.test(this.valueOf());
+
+    this.__result = exp.test(self.__value);
+    return this.__result;
   };
 
   return func;
@@ -61,11 +83,11 @@ function getReg(method,str) {
 
   var expressions = {
     'startsWithRange' : '^[' + str + ']',
-    'startsWithChar' : '^' + str[0] + '\\s',
+    'startsWithChar' : '^' + str[0],
     'startsWithWord' : '^' + str + '\\s',
     'endsWithRange' : '[' + str + ']$',
-    'endsWithChar' : str + '$',
-    'endsWithWord' : '\\s{1,}' + str + '$',
+    'endsWithChar' : str[0] + '$',
+    'endsWithWord' : '\\s' + str + '$',
     'containsRange' : '[' + str + ']',
     'containsChar' : str[0],
     'containsWord' : str,
