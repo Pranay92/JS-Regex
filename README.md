@@ -25,7 +25,7 @@ Once the library is loaded, all the methods are added in the prototype of the St
 
 You can also do method chaining. Example - 
 ````
-  var str = 'This is not amazing, but still I'm gonna try it'
+  var str = 'This is not amazing, but still I am gonna try it'
   
   // the following will return true
   var isValid = str.startsWithChar('T')
