@@ -30,7 +30,7 @@ You can also do method chaining. Example -
   // the following will return true
   var isValid = str.startsWithChar('T')
                    .containsWord('something')
-                   .containsRange('1-9')
+                   .containsRange('a-z')
                    .endsWithWord('it')
                    .endsWithChar('t')
 ````
@@ -38,3 +38,5 @@ You can also do method chaining. Example -
 
 1. Find a way to minimise the file size.
 2. Add more methods.
+3. Add an optional configuration object to make things more flexible.
+4. 
