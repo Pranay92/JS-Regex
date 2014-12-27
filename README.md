@@ -22,4 +22,4 @@ Once the library is loaded, all the methods are added in the prototype of the St
 
 ## TODO
 
-1. Allow method chaining.
+1. Allow method chaining to group multiple regexpressions into one.
