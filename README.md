@@ -22,4 +22,5 @@ Once the library is loaded, all the methods are added in the prototype of the St
 
 ## TODO
 
-1. Allow method chaining to group multiple regexpressions into one.
+1. Allow method chaining to group multiple regexpressions into one.  
+2. Find a way to minimise the file size.
