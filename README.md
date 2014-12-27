@@ -39,4 +39,3 @@ You can also do method chaining. Example -
 1. Find a way to minimise the file size.
 2. Add more methods.
 3. Add an optional configuration object to make things more flexible.
-4. 
