@@ -11,7 +11,6 @@
   8. containsChar
   9. containsWord
 
-
 */
 
 function RegEx() {
