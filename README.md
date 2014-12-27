@@ -19,3 +19,7 @@ Once the library is loaded, all the methods are added in the prototype of the St
 6. `.endsWithRange(range)` returns true if the string ends with the provided range.  
 7. `.containsChar(char)` returns true if the string contains the provided character.
 8. `.containsWord(word)` returns true if the string contains the provided word.
+
+## TODO
+
+1. Allow method chaining.
