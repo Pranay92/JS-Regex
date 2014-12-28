@@ -17,8 +17,8 @@ function RegEx() {
   
   this.pattern;
   this.ended;
-  this._methods = ['startsWith','endsWith','followedBy','contains'];
-  this._suffixes = ['Char','Word','Range'];
+  this._methods = ['startsWith','endsWith','contains'];
+  this._suffixes = ['Char','Word','Range','SpecialChar'];
   this.init();
 }
 
@@ -86,12 +86,15 @@ function getReg(method,str) {
     'startsWithRange' : '^[' + str + ']',
     'startsWithChar' : '^' + str[0],
     'startsWithWord' : '^' + str + '\\s',
+    'startsWithSpecialChar' : '^[' + str[0] + ']',
     'endsWithRange' : '[' + str + ']$',
     'endsWithChar' : str[0] + '$',
     'endsWithWord' : '\\s' + str + '$',
+    'endsWithSpecialChar' : '[' + str[0] + ']$',
     'containsRange' : '[' + str + ']',
     'containsChar' : str[0],
     'containsWord' : str,
+    'containsSpecialChar' : '[' + str[0] + ']',
     'default' : '^' + str
   };
 

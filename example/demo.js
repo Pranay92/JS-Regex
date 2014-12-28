@@ -3,7 +3,7 @@ require('../regex');
 
 var str = 'This is a demo string';
 
-var str2 = 'Incredibly random string that has nothing to do with previous one';
+var str2 = 'Incredibly random string that has nothing to do with previous one.';
 
 //should return false since the sentence starts with a word
 console.log(str.startsWithChar('T'));
@@ -15,7 +15,7 @@ console.log(str.startsWithWord('This'));
 console.log(str.startsWithRange('A-Z'));
 
 // this too is case sensitive
-console.log(str.endsWithChar('g'));
+console.log(str.endsWithSpecialChar('g'));
 
 // needs a complete word to work
 console.log(str.endsWithWord('string'));
@@ -38,7 +38,7 @@ var bool =  str.startsWithChar('T')
 
 var bool2 = str2.startsWithChar('I')
 				.containsChar('r')
-				.endsWithWord(' ')
+				.endsWithSpecialChar('.');
 
 console.log('Result of a chaining operation ' + bool);
 console.log('Result of a chaining operation ' + bool2);
