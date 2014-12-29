@@ -32,7 +32,7 @@ You can also do method chaining. Example -
   
   // the following will return true
   var isValid = str.startsWithChar('T')
-                   .containsWord('something')
+                   .containsWord('gonna')
                    .containsRange('a-z')
                    .endsWithWord('it')
                    .endsWithChar('t')
