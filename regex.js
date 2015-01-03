@@ -58,7 +58,7 @@ RegEx.prototype.process = function(method) {
 
     // do not compute further if the previous result was false
 
-    if(self.__result === false) {
+    if(self.__result === false && (typeof this.valueOf() !== 'string')) {
       return false;
     }
 
@@ -70,7 +70,9 @@ RegEx.prototype.process = function(method) {
     var exp = getReg(method,str);
 
     self.__result = exp.test(self.__value);
+
     return self.__result;
+
   };
 
   return func;
