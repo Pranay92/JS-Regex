@@ -1,6 +1,8 @@
 JS-Regex
 ========
 
+[![Join the chat at https://gitter.im/Pranay92/JS-Regex](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Pranay92/JS-Regex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A simple JS library that allows you to generate JS regular expression objects
 
 ## Why
