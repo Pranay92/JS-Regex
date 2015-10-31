@@ -57,8 +57,7 @@ RegEx.prototype.process = function(method) {
   var func = function(str) {
 
     // do not compute further if the previous result was false
-
-    if(self.__result === false && (typeof this.valueOf() !== 'string')) {
+    if(self.__result === false) {
       return false;
     }
 

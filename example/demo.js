@@ -1,4 +1,4 @@
-require('../regex');
+require('../regex.min');
 
 
 var str = 'This is a demo string';
@@ -31,7 +31,7 @@ console.log(str.containsChar('e'));
 
 
 /*METHOD CHAINING*/
-var bool =  str.startsWithChar('T')
+var bool1 =  str.startsWithChar('T')
 			   .containsChar('d')
 			   .containsWord('demo')
 			   .endsWithChar('g');
@@ -40,7 +40,7 @@ var bool2 = str2.startsWithChar('I')
 				.containsChar('r')
 				.endsWithSpecialChar('.');
 
-console.log('Result of a chaining operation ' + bool);
+console.log('Result of a chaining operation ' + bool1);
 console.log('Result of a chaining operation ' + bool2);
 
 
