@@ -25,17 +25,21 @@ function RegEx() {
 // initialize all the methods of teh regular expression
 RegEx.prototype.init = function() {
   
-  var negative = 'doesNot';
-  var methodLength = this._methods.length;
-  var suffixLength = this._suffixes.length;
+  var negative = 'doesNot',
+      methodLength = this._methods.length,
+      suffixLength = this._suffixes.length,
+      currMethod,
+      currVerb,
+      methodName,
+      i;
 
   while(methodLength--) {
     
-    for(var i= 0; i<suffixLength;i++) {
+    for (i= 0; i<suffixLength;i++) {
       
-      var currMethod = this._methods[methodLength];
-      var currVerb = this._suffixes[i];
-      var methodName = currMethod + currVerb;
+      currMethod = this._methods[methodLength];
+      currVerb = this._suffixes[i];
+      methodName = currMethod + currVerb;
       String.prototype[methodName] = this.process(methodName);
 
       /*
@@ -52,27 +56,26 @@ RegEx.prototype.init = function() {
 // used to generate function for each of them
 RegEx.prototype.process = function(method) {
   
-  var self = this;
+  var self = this,
+      func = function(str) {
 
-  var func = function(str) {
+        // do not compute further if the previous result was false
+        if(self.__result === false) {
+          return false;
+        }
 
-    // do not compute further if the previous result was false
-    if(self.__result === false) {
-      return false;
-    }
+        // this works the first time when called on a string variable
+        if(typeof this.valueOf() === 'string') {
+          self.__value = this.valueOf();
+        }
 
-    // this works the first time when called on a string variable
-    if(typeof this.valueOf() === 'string') {
-      self.__value = this.valueOf();
-    }
+        var exp = getReg(method,str);
 
-    var exp = getReg(method,str);
+        self.__result = exp.test(self.__value);
 
-    self.__result = exp.test(self.__value);
+        return self.__result;
 
-    return self.__result;
-
-  };
+      };
 
   return func;
 };
@@ -84,30 +87,30 @@ function getReg(method,str) {
   str = str.toString();
 
   var expressions = {
-    'startsWithRange' : '^[' + str + ']',
-    'startsWithChar' : '^' + str[0],
-    'startsWithWord' : '^' + str + '\\s',
-    'startsWithSpecialChar' : '^[' + str[0] + ']',
-    'endsWithRange' : '[' + str + ']$',
-    'endsWithChar' : str[0] + '$',
-    'endsWithWord' : '\\s' + str + '$',
-    'endsWithSpecialChar' : '[' + str[0] + ']$',
-    'containsRange' : '[' + str + ']',
-    'containsChar' : str[0],
-    'containsWord' : str,
-    'containsSpecialChar' : '[' + str[0] + ']',
-    'default' : '^' + str
-  };
+      'startsWithRange' : '^[' + str + ']',
+      'startsWithChar' : '^' + str[0],
+      'startsWithWord' : '^' + str + '\\s',
+      'startsWithSpecialChar' : '^[' + str[0] + ']',
+      'endsWithRange' : '[' + str + ']$',
+      'endsWithChar' : str[0] + '$',
+      'endsWithWord' : '\\s' + str + '$',
+      'endsWithSpecialChar' : '[' + str[0] + ']$',
+      'containsRange' : '[' + str + ']',
+      'containsChar' : str[0],
+      'containsWord' : str,
+      'containsSpecialChar' : '[' + str[0] + ']',
+      'default' : '^' + str
+    },
+    exp;
 
-  var exp = expressions[method] || expressions['default'];
+  exp = expressions[method] || expressions['default'];
   return new RegExp(exp);
 
 };
 
+var reg = new RegEx();
 
 if(typeof module === 'object') {
-  module.exports = new RegEx();
+  module.exports = reg;
 }
 
-
-var reg = new RegEx();
