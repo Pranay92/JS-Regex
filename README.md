@@ -9,6 +9,8 @@ A simple JS library that allows you to generate JS regular expression objects
 
 Because understanding regular expressions and memorizing them has always been very hard for me. I'm hoping that by making this library I may eventually understand it and also help someone for the same.
 
+**Because it's fun!!**
+
 ## Methods
 
 Once the library is loaded, all the methods are added in the prototype of the String type, thus all the string variables will have access to it.
