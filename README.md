@@ -7,9 +7,13 @@ A simple JS library that allows you to generate JS regular expression objects
 
 ## Why
 
-Because understanding regular expressions and memorizing them has always been very hard for me. I'm hoping that by making this library I may eventually understand it and also help someone for the same.
-
 **Because it's fun!!**
+
+And because understanding regular expressions and memorizing them has always been very hard for me. I'm hoping that by making this library I may eventually understand it and also help someone for the same.
+
+## Whats different about this?
+
+Unlike other regular expression libraries, it doesn't returns you a regular expression object. Instead it overrides string prototypes by adding function mentioned below. This avoids you the hassle to create objects everytime you want to validate a string.
 
 ## Methods
 
