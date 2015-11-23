@@ -5,7 +5,7 @@ JS-Regex
 
 A simple JS library that allows you to generate JS regular expression objects
 
-## Why
+## Why?
 
 **Because it's fun!!**
 
