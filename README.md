@@ -34,7 +34,7 @@ Once the library is loaded, all the methods are added in the prototype of the St
 
 ## Method Chaining
 
-You can also do method chaining. Example - 
+You can also do method chaining.
 ````
   var str = 'This is not amazing, but still I am gonna try it'
   
@@ -47,7 +47,7 @@ You can also do method chaining. Example -
 ````
 ## TODO
 
-1. Find a way to minimise the file size.
-2. Add more methods.
+1. Keep finding ways to minimize file size.
+2. Add more methods that can be achieved via normal regular expressions.
 3. Add an optional configuration object to make things more flexible.
-4. Make it available via npm
+4. Make it available via npm.
