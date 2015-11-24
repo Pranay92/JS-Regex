@@ -59,4 +59,4 @@ You can also do method chaining.
 2. Add more methods that can be achieved via normal regular expressions.
 3. Add an optional configuration object to make things more flexible. 
 4. 
-~~4. Make it available via npm.(underline)~~
+~~Make it available via npm.(underline)~~
