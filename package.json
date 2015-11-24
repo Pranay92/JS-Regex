@@ -1,0 +1,25 @@
+{
+  "name": "js-regex",
+  "version": "1.0.0",
+  "description": "A simple regular expresion wrapper for easier string validation.",
+  "main": "regex.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pranay92/JS-Regex.git"
+  },
+  "keywords": [
+    "regular-expression"
+  ],
+  "author": "pranaydubey3009@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pranay92/JS-Regex/issues"
+  },
+  "homepage": "https://github.com/Pranay92/JS-Regex#readme"
+}
