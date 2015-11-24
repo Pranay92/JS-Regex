@@ -15,6 +15,16 @@ And because understanding regular expressions and memorizing them has always bee
 
 Unlike other regular expression libraries, it doesn't returns you a regular expression object. Instead it overrides string prototypes by adding function mentioned below. This avoids you the hassle to create objects everytime you want to validate a string.
 
+## Usage (when using npm)
+
+`npm install js-regex`
+
+and then simply `require('js-regex')` in the starting of the project
+
+## Usage (when using on the client)
+
+Simply include the file before all the files.
+
 ## Methods
 
 Once the library is loaded, all the methods are added in the prototype of the String type, thus all the string variables will have access to it.
