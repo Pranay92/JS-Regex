@@ -1,7 +1,7 @@
 JS-Regex
 ========
 
-A simple regular expresion wrapper for easier string validation.
+A simple and light(~1kb) regular expresion wrapper for easier string validation.
 
 ## Why?
 
