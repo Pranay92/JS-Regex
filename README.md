@@ -58,5 +58,5 @@ You can also do method chaining.
 1. Keep finding ways to minimize file size.
 2. Add more methods that can be achieved via normal regular expressions.
 3. Add an optional configuration object to make things more flexible. 
-4. 
-~~Make it available via npm.~~
+4. ~~Make it available via npm.~~
+5. Make it available via cdn.
