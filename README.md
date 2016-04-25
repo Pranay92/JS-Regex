@@ -3,6 +3,8 @@ JS-Regex
 
 A simple and light(~1kb) regular expresion wrapper for easier string validation.
 
+[Live Demo](https://tonicdev.com/571e52066b7cde11009e151f/571e52066b7cde11009e1520)
+
 ## Why?
 
 **Because it's fun!!**
