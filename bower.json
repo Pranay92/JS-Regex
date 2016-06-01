@@ -1,0 +1,20 @@
+{
+  "name": "js-regex",
+  "description": "A simple regular expresion wrapper for easier string validation.",
+  "main": "regex.js",
+  "authors": [
+    "pranaydubey3009@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "regular-expression"
+  ],
+  "homepage": "https://github.com/Pranay92/JS-Regex",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
